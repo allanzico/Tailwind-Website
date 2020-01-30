@@ -1,0 +1,29 @@
+{
+  "name": "Tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "dependencies": {
+    "autoprefixer": "^9.7.4",
+    "postcss": "^7.0.26",
+    "postcss-cli": "^7.1.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "tailwindcss": "^1.1.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
+    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allanzico/Tailwind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allanzico/Tailwind/issues"
+  },
+  "homepage": "https://github.com/allanzico/Tailwind#readme"
+}
