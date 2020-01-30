@@ -4,8 +4,14 @@ import Vue from 'vue';
 
 new Vue({
     el: '#navigation',
-    mounted() {
-        console.log(this.$el);
+    data: {
+        isOpen: false,
+
+    },
+    methods: {
+        toggle() {
+            this.isOpen = !this.isOpen
+        }
     }
 
 
