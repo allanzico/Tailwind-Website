@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "watch": "cross-env NODE_ENV=development webpack-dev-server --watch",
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
