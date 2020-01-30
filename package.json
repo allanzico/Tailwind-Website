@@ -6,7 +6,10 @@
     "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "autoprefixer": "^9.5.1",
+    "babel-loader": "^8.0.6",
     "cross-env": "^5.1",
     "css-loader": "^3.4.2",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
@@ -18,5 +21,8 @@
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "vue": "^2.6.11"
   }
 }

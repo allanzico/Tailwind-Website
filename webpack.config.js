@@ -1,9 +1,17 @@
-const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/styles.css',
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js'
+    },
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm.js'
+        }
+    },
     mode: process.env.NODE_ENV,
     module: {
         rules: [
@@ -17,6 +25,7 @@ module.exports = {
                     ],
                 }),
             },
+            { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
         ],
     },
     plugins: [
@@ -27,7 +36,6 @@ module.exports = {
             filename: 'index.html',
             template: 'src/index.html',
         }),
-        require('tailwindcss'),
-        require('autoprefixer'),
+
     ],
 }
