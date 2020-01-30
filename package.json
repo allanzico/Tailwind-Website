@@ -1,29 +1,21 @@
 {
-  "name": "Tailwind",
-  "version": "1.0.0",
-  "description": "",
-  "main": "postcss.config.js",
-  "dependencies": {
-    "autoprefixer": "^9.7.4",
-    "postcss": "^7.0.26",
-    "postcss-cli": "^7.1.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "tailwindcss": "^1.1.4"
-  },
-  "devDependencies": {},
+  "private": true,
   "scripts": {
-    "build": "postcss css/tailwind.css -o public/build/tailwind.css",
-    "watch": "postcss css/tailwind.css -o public/build/tailwind.css --watch"
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "prod": "cross-env NODE_ENV=production webpack --no-progress"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/allanzico/Tailwind.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/allanzico/Tailwind/issues"
-  },
-  "homepage": "https://github.com/allanzico/Tailwind#readme"
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "cross-env": "^5.1",
+    "css-loader": "^3.4.2",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.0.6",
+    "postcss": "^6.0.19",
+    "postcss-loader": "^2.1.1",
+    "style-loader": "^0.20.3",
+    "tailwindcss": "^1",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.1"
+  }
 }
