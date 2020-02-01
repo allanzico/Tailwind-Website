@@ -14,15 +14,15 @@
 
 <body class="bg-gray-300 h-screen antialiased text-gray-900">
   <div class="flex md:flex-row-wrap flex-wrap bg-gray-100 ">
-    <header id="navigation" :class="isOpen ? 'sm:bg-indigo-600'  : 'sm:bg-gray-100'"
+    <header id="navigation" :class="isOpen ? 'sm:bg-indigo-600 '  : 'sm:bg-gray-100'"
       class=" relative w-full md:w-1/6 sm:h-screen sm:border-r sm:border-indigo-200 bg-indigo-600 p-4 text-gray-200 ">
       <div class="flex items-center justify-between ">
         <div class="sm:hidden block h-10 w-10 rounded-full border overflow-hidden ">
           <img class="object-top " src="/img/profile.jpeg" alt="logo">
         </div>
         <div class="sm:content-center">
-          <button @click="isOpen =!isOpen" :class="isOpen ? 'sm:text-white'  : 'sm:text-indigo-600'" class="block  "
-            type="button">
+          <button @click="isOpen =!isOpen" :class="isOpen ? 'sm:text-white'  : 'sm:text-indigo-600'"
+            class="block sm:ml-10  " type="button">
             <svg class="h-6 w-6 sm:h-8 sm:w-8 fill-current " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
               <path v-if="isOpen"
                 d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z" />
@@ -32,7 +32,7 @@
         </div>
       </div>
 
-      <div :class="isOpen ? 'block'  : 'hidden'" class="px-2 py-2 sm:text-2xl sm:uppercase sm:py-24  ">
+      <div :class="isOpen ? 'block'  : 'hidden'" class="px-2 py-2 sm:text-2xl sm:uppercase sm:py-24 ">
         <a href="#"
           class="block border-b border-indigo-500 px-2 sm:py-4 sm:px-4 py-1 text-white font-semibold  hover:bg-indigo-800 ">About
           me</a>
@@ -41,17 +41,32 @@
         <a href="#"
           class="block px-2 sm:py-4 sm:px-4 mt-1 sm:mt-6 py-1 text-white font-semibold  hover:bg-indigo-800">Contact</a>
       </div>
-      <div :class="isOpen ? 'hidden'  : 'sm:block'" class=" hidden content-center ">
-        <p class="text-gray-900">SOMETHING</p>
-        <p class="text-gray-900">SOMETHING</p>
-        <p class="text-gray-900">SOMETHING</p>
-        <p class="text-gray-900">SOMETHING</p>
+      <div :class="isOpen ? 'hidden'  : 'sm:block'" class=" absolute bottom-0 mb-24 ">
+        <p class="text-gray-900   ">SOMETHING</p>
+        <p class="text-gray-900  ">SOMETHING</p>
+        <p class="text-gray-900  ">SOMETHING</p>
+        <p class="text-gray-900   ">SOMETHING</p>
+
+      </div>
+      <div :class="isOpen ? 'hidden'  : 'sm:block'" class="absolute bottom-0 mb-4 ">
+        <div class="mt-4 flex items-center">
+          <span class=" text-gray-600 ">By</span>
+          <span class="ml-1 text-indigo-800 font-semibold"> <a href="https://www.instagram.com/allanzico/?hl=en"
+              target="_blank">Allan</a> </span>
+          <span class="ml-1 text-gray-600 text-sm ">with</span>
+          <svg class=" ml-2 w-4 h-4 fill-current text-indigo-800" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20">
+            <path d="M10 3.22l-.61-.6a5.5 5.5 0 0 0-7.78 7.77L10 18.78l8.39-8.4a5.5 5.5 0 0 0-7.78-7.77l-.61.61z" />
+          </svg>
+
+        </div>
+
       </div>
     </header>
     <div class="w-full md:w-5/12 h-48 sm:h-screen p-4 items-center text-gray-900">
       <svg id="b7c7232a-1587-4d3b-a231-6a0b0f3ca05b" class="w-full h-full" data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg" width="887.03455" height="630.59514" viewBox="0 0 887.03455 630.59514">
-        <title>personal_opinions</title>
+
         <path
           d="M271.57105,717.132l-2.27009-8.95369a116.26686,116.26686,0,0,0-12.33507-4.42545l-.28664,4.16115-1.16227-4.58431c-5.1983-1.48439-8.73471-2.13824-8.73471-2.13824s4.77687,18.16495,14.796,32.05229l11.67448,2.05069-9.06958,1.30767a47.03847,47.03847,0,0,0,4.05695,4.29933c14.575,13.52871,30.80881,19.73576,36.25923,13.86381s-1.94652-21.59928-16.52152-35.128a61.9275,61.9275,0,0,0-15.87616-10.20857Z"
           transform="translate(-156.48273 -134.70243)" fill="#e6e6e6" />
@@ -149,7 +164,7 @@
 
     </div>
     <div class="w-full md:w-5/12 h-screen sm:h-screen p-4 sm:py-24 text-start text-gray-900">
-      <h1 class="sm:mt-8 text-4xl sm:text-6xl lg:text-8xl xl:text-8xl font-bold text-indigo-600">
+      <h1 class="sm:mt-8 text-4xl sm:text-6xl lg:text-8xl xl:text-8xl font-bold text-indigo-600 ">
         Sandra<br class="hidden lg:inline"></h1>
       <h4 class="text-indigo-500">
         /ɪnˈkrɛdɪb(ə)l/
@@ -174,6 +189,10 @@
         </ol>
 
       </p>
+      <div class="mt-4"><a href="#" class="btn btn-indigo sm:text-base">
+          Hala!
+        </a>
+      </div>
     </div>
   </div>
 
